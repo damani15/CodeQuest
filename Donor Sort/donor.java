@@ -15,8 +15,8 @@ class donor {
             ArrayList<String> both = new ArrayList<String>();
             ArrayList<String> last = new ArrayList<String>();
             
-            StringTokenizer currentyear = new StringTokenizer(br.readLine());
-            StringTokenizer lastyear = new StringTokenizer(br.readLine());
+            StringTokenizer lastyear = new StringTokenizer(br.readLine(),  ",");
+            StringTokenizer currentyear = new StringTokenizer(br.readLine(), ",");
             
             while(currentyear.hasMoreTokens()){
                 current.add(currentyear.nextToken());
@@ -24,31 +24,37 @@ class donor {
             while(lastyear.hasMoreTokens()){
                 last.add(lastyear.nextToken());
             }
+
+            
+            System.out.println(current.size());
             for(int j=0; j<current.size(); j++){
+                System.out.println(current.get(j));
                 for(int g=0; g<last.size(); g++){
-                if(current.get(j).equals(last.get(g))){  
-                    both.add(current.get(j));
-                    current.remove(j);
-                    last.remove(g);
-                    break;          
-                }
+                    if(current.get(j).equals(last.get(g))){  
+                        both.add(current.get(j));
+                        current.remove(j);
+                        j--;
+                        last.remove(g);     
+                        break;
+                    }
                 }
             }
 
             last = sort(last);
-            for(int j=0; i<last.size(); j++){
+
+            for(int j=0; j<last.size(); j++){
                 if(j==0){
                     pw.print(last.get(j));
                 }
                 else{ 
                     pw.print("," + last.get(j));
                 }
-            
             }
+
             pw.println();
             
             both = sort(both);
-            for(int j=0; i<both.size(); j++){
+            for(int j=0; j<both.size(); j++){
                 if(j==0){
                     pw.print(both.get(j));
                 }
@@ -60,16 +66,18 @@ class donor {
             pw.println();
             
             current = sort(current);
-            for(int j=0; i<current.size(); j++){
+            for(int j=0; j<current.size(); j++){
                 if(j==0){
                     pw.print(current.get(j));
                 }
                 else{ 
                     pw.print("," + current.get(j));
                 }
-            
             }
-            pw.println();
+            if(i!=numCases-1){
+                pw.println();
+    
+            }
         }
             
             pw.close();
@@ -78,7 +86,9 @@ class donor {
     
     public static ArrayList<String> sort(ArrayList<String> tofin){
         ArrayList<String> copy = new ArrayList<String>();
-        copy = tofin;
+        for(int i=0; i<tofin.size(); i++){
+            copy.add(tofin.get(i));
+        }
 
         boolean sortT=false;
 		//implement bubble sort
