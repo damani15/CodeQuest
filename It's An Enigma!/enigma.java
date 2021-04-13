@@ -72,7 +72,7 @@ class enigma {
                     rotors.set(currentorder[1] + 4, spin(rotors.get(currentorder[1] + 4)));
                     countm++;
                 }
-                if (countm % 10 == 0 & countm != 0) {
+                if (countm % 10 == 0 && countm != 0) {
                     rotors.set(currentorder[0] - 1, spin(rotors.get(currentorder[0] - 1)));
                     rotors.set(currentorder[0] + 4, spin(rotors.get(currentorder[0] + 4)));
                 }
