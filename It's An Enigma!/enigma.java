@@ -72,7 +72,7 @@ class enigma {
                     rotors.set(currentorder[1] + 4, spin(rotors.get(currentorder[1] + 4)));
                     countm++;
                 }
-                if (countm % 10 == 0 & countm != 0) {
+                if (countm % 10 == 0 && countm != 0) {
                     rotors.set(currentorder[0] - 1, spin(rotors.get(currentorder[0] - 1)));
                     rotors.set(currentorder[0] + 4, spin(rotors.get(currentorder[0] + 4)));
                 }
@@ -94,7 +94,7 @@ class enigma {
         // first gear
         Integer output = rot.get(or[0] - 1)[(x)];
         // second gear
-        output = rot.get(or[1] - 1)[(output)];
+        output = rot.get(or[1] - 1)[output];
         // third gear
         output = rot.get(or[2] - 1)[output];
         // reflector
@@ -105,6 +105,7 @@ class enigma {
         output = rot.get(or[1] + 4)[output];
         // first gear (reverse)
         output = rot.get(or[0] + 4)[output];
+
         return output.toString().charAt(0);
     }
 }

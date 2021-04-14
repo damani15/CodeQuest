@@ -9,6 +9,13 @@
             "name": "Launch enigma",
             "request": "launch",
             "mainClass": "enigma",
+            "projectName": "It's An Enigma!_21a78b09"
+        },
+        {
+            "type": "java",
+            "name": "Launch enigma",
+            "request": "launch",
+            "mainClass": "enigma",
             "projectName": "It's An Enigma!_dddbd650"
         },
         {
