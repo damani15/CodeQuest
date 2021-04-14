@@ -13,7 +13,7 @@ class batter {
             StringTokenizer st = new StringTokenizer(br.readLine(),  ", :");
             pw.print(st.nextToken()+"=");//name
             double atbats=0;
-         
+            
             double points=0;
             //load data
             while(st.hasMoreTokens()){
@@ -44,5 +44,5 @@ class batter {
         br.close();
         pw.close();
     }
-   
+    
 }
