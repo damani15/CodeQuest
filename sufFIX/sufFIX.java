@@ -14,12 +14,14 @@ class palindrome {
             String hold = br.readLine();
             char[] chars = hold.toCharArray();
         
+            // check the last digit  
             if(chars[chars.length-3] == '1'){
                 
                 chars[chars.length-1] = 't';
                 chars[chars.length-2] = 's';
                
                 if(chars.length>3){
+                    //check for 11
                     if(chars[chars.length-4] == '1'){
                         pw.println(hold);
                     }

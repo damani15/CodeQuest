@@ -32,10 +32,8 @@ class carrier {
                 
 
                 //do the calculations
-                System.out.println("Start slope: " + (py-sy)/(px-sx));
-                System.out.println("End slope: " + (py-ey)/(px-ex));
-                if ((py-sy)/(px-sx) <= -.8 && (py-sy)/(px-sx) >= -1.6){
-                    if((py-ey)/(px-ex) <= -.8 && (py-ey)/(px-ex) >= -1.6){
+                if ((py-sy)/(px-sx) <= -.8 && (py-sy)/(px-sx) >= -1.6){ //check start slope
+                    if((py-ey)/(px-ex) <= -.8 && (py-ey)/(px-ex) >= -1.6){ //check end slope
                         pw.println("Clear To Land!");
                     }
                     else{
@@ -49,7 +47,7 @@ class carrier {
             }
         }
 
-        pw.close();
+        pw.close(); 
         br.close();
     }
 }

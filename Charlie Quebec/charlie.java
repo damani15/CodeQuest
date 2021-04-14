@@ -15,22 +15,23 @@ class charlie {
             int stringnum = Integer.parseInt(br.readLine());
 
             for(int j=0; j<stringnum; j++){
-                String ret = new String();
-                String hold = br.readLine();
+                String ret = new String(); //string that we return
+                String hold = br.readLine(); //word we are converting
                 char[] chars = hold.toCharArray();
                 for(int g=0; g<chars.length; g++){
-                    int c = (int) Character.toLowerCase(chars[g]);
+
+                    int c = (int) Character.toLowerCase(chars[g]); //convert word
                     if(c-97>0){
 
                         ret += alphabet[c-97];
                         if(g!=chars.length-1){
-                            ret += "-";
+                            ret += "-"; //add a dash 
                         }
                     }
                     
-                    else{ 
-                        ret = ret.substring(0, ret.length()-1);
-                        ret += " "; 
+                    else{  //a space
+                        ret = ret.substring(0, ret.length()-1); //remove the dash
+                        ret += " ";  //add a space
                     }
                 }
                 pw.println(ret);
