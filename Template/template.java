@@ -1,18 +1,17 @@
 import java.util.*;
-import java.io.*;
-
 
 public class template {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("template.in"));
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("template.out")));
+    public static void main(String[] args) {
 
-        int numcases = Integer.parseInt(br.readLine());
-        for(int i=0; i< numcases; i++){
-            
+        try (Scanner input = new Scanner(System.in)){
+            int testCases = Integer.parseInt(input.nextLine());
+           
+            for (int testcase = 0; testcase < testCases; testcase++) {
+                StringTokenizer st = new StringTokenizer(input.nextLine(),":");
+
+                
+                
+            }
         }
-        br.close();
-        pw.close();
     }
-
 }
