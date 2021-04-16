@@ -25,7 +25,7 @@ public class encode {
                     char current = toEncode.charAt(i);
                     char keyChar = keyWord.charAt(i%keyWord.length());
 
-                    int place1 = -1;
+                    int place1 = 0;
                     int place2 = 0;
                     for (int j = 0; j < alphabet.length; j++) {
                         if (alphabet[j] == current) {
@@ -34,10 +34,6 @@ public class encode {
                         if (alphabet[j] == keyChar) {
                             place2 = j;
                         }
-                    }
-                    if (place1 == -1) {
-                        out += " ";
-                        continue;
                     }
                     out += alphabet[(place1+place2)%26];
                 }
