@@ -7,8 +7,8 @@ public class shout {
             int testCases = Integer.parseInt(input.nextLine());
             
             for (int testcase = 0; testcase < testCases; testcase++) {
-                
-                
+                String output=input.nextLine();
+                System.out.println(output.toLowerCase());
             }
         }
     }
