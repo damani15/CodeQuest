@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class template {
     public static void main(String[] args) {
@@ -6,9 +6,8 @@ public class template {
         try (Scanner input = new Scanner(System.in)){
             int testCases = Integer.parseInt(input.nextLine());
             
-            for (int testcase = 0; testcase < testCases; testcase++) {
-                
-                
+            for(int testcase = 0; testcase < testCases; testcase++) {
+                System.out.println(input.nextLine());
             }
         }
     }
