@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class shout {
+public class template {
     public static void main(String[] args) {
 
         try (Scanner input = new Scanner(System.in)){
