@@ -48,14 +48,14 @@ public class zipper {
                 
                 for (int i = 0; i < uLines; i++){
                     uEnd += Integer.parseInt(stU.nextToken());
-                    System.out.println(uppercase.substring(0 + uOffset, uEnd));
-                    uOffset += uEnd;
-                    System.out.println("Start: " + uOffset + " End: " + uEnd);
+                    // System.out.println("Start: " + uOffset + " End: " + uEnd);
+                    System.out.println(uppercase.substring(uOffset, uEnd));
+                    uOffset = uEnd;
                 }
                 for (int i = 0; i < lLines; i++){
                     lEnd += Integer.parseInt(stL.nextToken());
-                    System.out.println(lowercase.substring(0 + lOffset, lEnd));
-                    lOffset += lEnd;
+                    System.out.println(lowercase.substring(lOffset, lEnd));
+                    lOffset = lEnd;
                 }
                 
                 
