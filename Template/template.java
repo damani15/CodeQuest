@@ -1,12 +1,12 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class template {
     public static void main(String[] args) {
 
-        try (Scanner input = new Scanner(System.in)){
+        try (Scanner input = new Scanner(System.in)) {
             int testCases = Integer.parseInt(input.nextLine());
-            
-            for(int testcase = 0; testcase < testCases; testcase++) {
+
+            for (int testcase = 0; testcase < testCases; testcase++) {
                 System.out.println(input.nextLine());
             }
         }
