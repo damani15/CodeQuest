@@ -7,7 +7,7 @@ public class template {
             int testCases = Integer.parseInt(input.nextLine());
 
             for (int testcase = 0; testcase < testCases; testcase++) {
-                System.out.println(input.nextLine());
+                StringTokenizer st = new StringTokenizer(input.nextLine(), "");
             }
         }
     }
