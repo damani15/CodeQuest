@@ -22,7 +22,7 @@ public class complex {
                         nesting++;
                     }
                     if(lines.get(i).length()==1){
-                        
+
                     }
                 }
                 cycComplex = nesting+1;

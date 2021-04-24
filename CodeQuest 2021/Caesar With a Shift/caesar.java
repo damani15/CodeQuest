@@ -16,7 +16,7 @@ public class caesar {
 
                 ArrayList<Integer> shiftSet = new ArrayList<Integer>();
                 ArrayList<Integer> directionSet = new ArrayList<Integer>();
-
+                
                 for (int i = 0; i < shiftSetLength; i++){
                     shiftSet.add(Integer.parseInt(st1.nextToken()));
                 }
@@ -53,8 +53,11 @@ public class caesar {
                             }
                             messageArray[j] = (char) ((int)messageArray[j] - shiftSet.get(i));
                             if (lowercase == true){
-                                while (messageArray[j] < 97 || messageArray[j] > 122){
+                                while (messageArray[j] > 122){
                                     messageArray[j] = (char) ((int)messageArray[j] - 26);
+                                }
+                                while (messageArray[j] < 97){
+                                    messageArray[j] = (char) ((int)messageArray[j] + 26);
                                 }
                             }
                             else {
